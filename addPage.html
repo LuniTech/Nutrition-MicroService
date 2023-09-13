@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<style>
+.bodyCover{
+  //background-image: url("/pics/Cravings Journal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+ 
+}
+label{
+//color:green;
+font-weight:bold;
+}
+form{
+margin: 5%;
+}
+.formContainer{
+
+ /* background-image: url(smoothie.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+*/  
+
+}
+h1{
+text-align:center;
+}
+</style>
+
+</head>
+<!--<div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+-->
+<body>
+
+<div class="bodyCover"   style="background-image: url('/pics/Cravings Journal.jpg');">
+<h1>Nutrition API</h1>
+<div class="formContainer opacity-100">
+<form action="/search" method="post">
+<div class="row mb-3">
+<label for="Name" class="col-sm-2 col-form-label">Food Name</label>
+<div class="col-sm-10"><input type="text" name="Name" id="Name" ></div>
+
+</div>
+
+<div class="row mb-3">
+<label for="Energy" class="col-sm-2 col-form-label" value="0">Energy</label>
+<div class="col-sm-10">
+<input type="number" name="Energy" id="Energy" value="0" step="0.01" min="0.00">
+</div>
+</div>
+
+
+<div class="row mb-3">
+<label for="Protein" class="col-sm-2 col-form-label">Protein</label>
+<div class="col-sm-10"><input type="number" name="Protein" id="Protein" value="0" step="0.01" min="0.00"></div>
+</div>
+
+<div class="row mb-3">
+<label for="Carbohydrates" class="col-sm-2 col-form-label">Carbohydrates</label>
+<div class="col-sm-10"><input type="number" name="Carbohydrates" id="Carbohydrates" value="0" step="0.01" min="0.00">
+</div>
+</div>
+
+<div class="row mb-3">
+<label for="TFat" class="col-sm-2 col-form-label" >Total Fat</label>
+<div class="col-sm-10"><input type="number" name="TFat" id="TFat" value="0" step="0.01" min="0.00"></div></div>
+
+
+<div class="row mb-3">
+<label for="SFat" class="col-sm-2 col-form-label">Saturated fat</label>
+<div class="col-sm-10"><input type="number" name="SFat" id="SFat" value="0" step="0.01" min="0.00"></div></div>
+
+
+<div class="row mb-3">
+<label for="TrFat" class="col-sm-2 col-form-label">Trans Fat</label>
+<div class="col-sm-10"><input type="number" name="TrFat" id="TrFat" value="0" step="0.01" min="0.00"></div></div>
+
+<div class="row mb-3">
+<label for="MFat" class="col-sm-2 col-form-label">Monounsaturated Fat</label>
+<div class="col-sm-10"><input type="number" name="MFat" id="MFat" value="0" step="0.01" min="0.00"></div></div>
+
+<div class="row mb-3">
+<label for="PFat" class="col-sm-2 col-form-label">Polyuns Fat</label>
+<div class="col-sm-10"><input type="number" name="PFat" id="PFat" value="0" step="0.01" min="0.00">
+</div></div>
+
+<div class="row mb-3">
+<label for="Fibre" class="col-sm-2 col-form-label">Total Fibre</label>
+<div class="col-sm-10"><input type="number" name="Fibre" id="Fibre" value="0" step="0.01" min="0.00"></div></div>
+
+<div class="row mb-3">
+<label for="Sodium" class="col-sm-2 col-form-label">Total Sodium</label>
+<div class="col-sm-10"><input type="number" name="Sodium" id="Sodium" value="0" step="0.01" min="0.00"></div></div>
+
+<div class="row mb-3">
+<label for="ImageUrl" class="col-sm-2 col-form-label">Image URL</label>
+<div class="col-sm-10"><input type="text" id="imageUrl" name="imageUrl" step="0.01" min="0.00">
+</div></div>
+
+
+<button type="submit" class="btn-primary btn-sm" role="button">Add Record</button>
+</form>
+<form action="/" method="GET">
+<button type="submit" class="btn-primary btn-sm" role="button">Home Page</button>
+</form>
+</div>
+<footer>Created By Zipho Innocent Lunika</footer>
+</div>
+</body>
+</html>

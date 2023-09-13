@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<style>
+.bodyContainer
+{
+height: 100vh;
+background-repeat:repeat-x;
+background-position: center;
+}
+textarea{
+margin-left:2%;
+margin-top:2%;
+resize: none;
+}
+</style>
+</head>
+<body>
+<div class="bodyContainer" style="background-image: url('/pics/Cravings Journal.jpg')">
+<form action="/del" method="post">
+<textarea id="w3review" name="w3review" rows="6" cols="120" readonly>
+API CALL LOAD:
+
+</textarea>
+
+
+<div class="row mb-3">
+<label for="ID" class="col-sm-2 col-form-label" value="0">Record ID</label>
+<div class="col-sm-10">
+<input type="text" name="RId" id="Energy" value="" min="0.00">
+</div>
+</div>
+
+
+
+
+
+<button type="submit" class="btn-primary btn-sm" role="button">Delete record</button>
+</form>
+<br>
+<form action="/" method="GET">
+<button type="submit" class="btn-primary btn-sm" role="button">Home Page</button>
+</form>
+</div>
+<script>
+let tArea = document.getElementById("w3review")
+let req = new XMLHttpRequest();
+req.open("GET","https://innocentnutri-app.herokuapp.com/api/allRecords?",true);
+req.send();
+req.onload = function()
+{
+edData = JSON.parse(req.responseText);
+console.log(edData);
+//tArea.innerText = JSON.stringify(edData);
+for(let i=0;i<edData.length;i++)
+	{
+	tArea.value+= "Record "+(i+1)+"| ID : "+edData[i]._id+" | Name :"+edData[i].Name+" | Energy: "+edData[i].Energy+"| Fibre: "+edData[i].Fibre+" | SFat: "+edData[i].SFat+" | Protein: "+edData[i].Protein+" | PFat : "+edData[i].PFat+" | MFat : "+edData[i].MFat+" | Sodium : "+edData[i].Sodium+"\r\n\n"
+	}
+
+/*Carbohydrates
+: 
+1321
+Energy
+: 
+32
+Fibre
+: 
+13
+ImageUrl
+: 
+"hahahah.com"
+MFat
+: 
+54
+Name
+: 
+"SuperFood"
+PFat
+: 
+45
+Protein
+: 
+123
+SFat
+: 
+2
+Sodium
+: 
+200
+__v
+: 
+0
+_id
+: 
+"63811459bf81a6e25661c549"*/
+}
+</script>
+
+</body>
+</html>

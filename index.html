@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Mouse+Memoirs&family=Permanent+Marker&family=Teko:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./bootstrap-4.5.2/bootstrap-4.5.2/dist/css/bootstrap.min.css">
+<style>
+a{
+text-decoration: none;
+color:white;
+}
+a:hover{
+text-decoration: none;
+}
+body{
+background-position:center;
+background-image: url("./pics/hBack.png")
+}
+h1{
+font-family: 'Carter One', cursive;
+font-family: 'Mouse Memoirs', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Teko', sans-serif;
+font-size:50px;
+color:black;
+}
+
+</style>
+</head>
+<body>
+<h1 class="text-left mark col-sm-4">Innocent Lunika's NutriApp API</h1>
+<div class="row mb-3">
+<form action="/addRecord" method="GET" class="col-sm-12">
+<button type="submit" class="btn-primary btn-lg col-sm-12" role="button">Add Record</button>
+</form >
+<br>
+
+<form action="/deletePage" method="GET" class="col-sm-12">
+<button type="submit" class="btn-primary btn-lg col-sm-12" role="button">Delete Record</button>
+</form>
+
+<br>
+<form action="/api/allRecords" method="GET" class="col-sm-12">
+<button type="submit" class="btn-primary btn-lg col-sm-12" role="button">Request API in JSON</button>
+</form>
+
+
+<br>
+<button type="submit" class="btn-primary btn-lg col-sm-12" role="button"><a href='http://innocentlunitechv2.000webhostapp.com/' alt='Broken Link'>About Innocent Lunika</a></button>
+<div class="info col-sm-12 mark">
+<b>Technologies used in this project:</b><br>
+<b>Front End :</b>html, css, javascript, bootstrap<br>
+<b>Backend:</b> Nodejs, express, mongodb, mongoose
+</div>
+</div>
+<footer class="mark"> Created by Zipho Innocent Lunika </footer>
+
+</body>
+</html>
